@@ -22,12 +22,60 @@
     <title>Home</title>
 
     <style>
-      .h1 {
+      body {
         color: #1f284f;
+      }
+
+      nav{
+        background-color: #1F384F;
+      }
+
+      .nav-item a:hover{
+        transition: 0.7s;
+        background-color: #3157BB;
+      }
+
+      button{
+        background-color: #1f284f;
+      }
+
+      /* Additional CSS for phone sized media */
+      @media (max-width: 768px) {
+        .nav-link{
+          text-align: center;
+        }
       }
     </style>
   </head>
   <body>
+    <div id="homepage"></div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#homepage">
+          <img src="assets/logo_self.png" alt="" width="30" height="24" />
+        </a>
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon w-100"><i class="fa-solid fa-caret-down"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-light rounded me-2" aria-current="page" href="#homepage">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light rounded me-2" href="form-aslab-regis.html">Daftar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light rounded me-2" href="form-request.html">Peminjaman Alat</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light rounded me-2" href="aslab-page.html">Aslab</a>
+            </li>
+          </ul>
+      </div>
+    </nav>
+    <!-- End of Navbar -->
     <div class="container-fluid w-75">
       <div class="row d-flex align-items-center mt-5">
         <div class="col-md d-flex justify-content-center">
@@ -41,14 +89,15 @@
             education courses suited for you. <br />
             <b>get started now.</b>
           </div>
-          <button type="button" class="btn btn-dark w-25 mt-2">
+          <button type="button" class="btn btn-outline-secondary mt-2 text-light rounded-pill" style="background-color: #1f284f;">
             Start Now
           </button>
         </div>
       </div>
       <div class="row mt-5 justify-content-center">
         <div class="h1 text-center fw-bold">SOCIAL MEDIA INFORMATION</div>
-        <img src="assets/pic-02.png" alt="" />
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <div class="elfsight-app-5ea95e3c-8b94-41aa-9fc3-9c0e9f43458b"></div>
       </div>
       <div class="row mt-5 justify-content-center">
         <div class="h1 text-start fw-bold">FREQUENTLY ASK QUESTION</div>
