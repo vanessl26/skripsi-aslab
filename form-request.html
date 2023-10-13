@@ -20,22 +20,18 @@
     />
 
     <style>
-      .h1 {
-        color: #1f284f;
+      nav {
+        background-color: #1f384f;
       }
 
-      nav{
-        background-color: #1F384F;
-      }
-
-      .nav-item a:hover{
+      .nav-item a:hover {
         transition: 0.7s;
-        background-color: #3157BB;
+        background-color: #3157bb;
       }
 
       /* Additional CSS for phone sized media */
       @media (max-width: 768px) {
-        .nav-link{
+        .nav-link {
           text-align: center;
         }
       }
@@ -50,24 +46,44 @@
         <a class="navbar-brand" href="home-page.html">
           <img src="assets/logo_self.png" alt="" width="30" height="24" />
         </a>
-        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon w-100"><i class="fa-solid fa-caret-down"></i></span>
+        <button
+          class="navbar-toggler bg-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon w-100"
+            ><i class="fa-solid fa-caret-down"></i
+          ></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active text-light rounded me-2" aria-current="page" href="home-page.html">Home</a>
+              <a
+                class="nav-link active text-light rounded me-2"
+                aria-current="page"
+                href="home-page.html"
+                >Home</a
+              >
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link text-light rounded me-2" href="form-request.html">Formulir</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link text-light rounded me-2" href="aslab-page.html"
+                >Aslab</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light rounded me-2" href="form-aslab-regis.html">Daftar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light rounded me-2" href="form-request.html">Peminjaman Alat</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light rounded me-2" href="aslab-page.html">Aslab</a>
+              <a class="nav-link text-light rounded me-2" href="profile.html"
+                >Profile</a
+              >
             </li>
           </ul>
+        </div>
       </div>
     </nav>
     <!-- End of Navbar -->
@@ -75,81 +91,98 @@
     <div class="container-fluid">
       <div class="row-md mt-3 d-flex justify-content-center">
         <div class="col-md-8">
-          <div class="h1 fw-bold text-center">Pilih Form Sesuai Kebutuhan Anda</div>
+          <div class="h2 text-center">Pilih Sesuai Kebutuhan Anda</div>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-md-8 text-center">
-          <button type="button" class="btn btn-outline-primary text-light me-2 mt-2" style="background-color: #3157BB;">
-            Instalasi Software
+          <button
+            type="button"
+            class="btn btn-info text-light me-2 mt-2 active"
+          >
+            Peminjaman/Pengembalian
           </button>
-          <button type="button" class="btn btn-outline-primary text-light me-2 mt-2" style="background-color: #3157BB;">
-            Pengadaan Perlengkapan dan Peralatan
-          </button>
-          <button type="button" class="btn btn-outline-primary text-light me-2 mt-2" style="background-color: #3157BB;">
-            Peminjaman Alat
+          <a href="form-lainnya.html"
+            ><button type="button" class="btn btn-info text-light me-2 mt-2">
+              Form Lainnya
+            </button></a
+          >
+          <button type="button" class="btn btn-info text-light me-2 mt-2">
+            Progress Submit formulir
           </button>
         </div>
       </div>
 
       <div class="row-md mt-4 mb-5 d-flex justify-content-center">
         <div class="col-md-8 border shadow-lg p-3 mb-5 bg-body rounded">
-          <div class="h2 text-center">
-            Form Request
-          </div>
+          <div class="h4 text-center">Form Peminjaman Alat</div>
           <div class="col-md">
             <div class="mb-3">
-              <label for="fullName" class="form-label">Full Name</label>
+              <label for="select_role" class="form-label">Alat</label>
+              <select class="form-select" id="pilih_alat">
+                <option value="" disabled selected>Pilih alat</option>
+                <option value="option1">Alat 1</option>
+                <option value="option2">Alat 2</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="nama_peminjam" class="form-label"
+                >Nama peminjam</label
+              >
               <input
                 type="text"
                 class="form-control"
-                id="fullName"
-                placeholder="Input your full name here..."
+                id="nama_peminjam"
+                placeholder="Input nama peminjam disini..."
               />
             </div>
             <div class="mb-3">
-              <label for="studentEmail" class="form-label">Email</label>
-              <input
-                type="email"
-                class="form-control"
-                id="studentEmail"
-                placeholder="Input your email here..."
-              />
-            </div>
-            <div class="mb-3">
-              <label for="phoneNumber" class="form-label">Phone Number</label>
+              <label for="nim_peminjam" class="form-label">NIM</label>
               <input
                 type="number"
                 class="form-control"
-                id="phoneNumber"
-                placeholder="Input your phone number here..."
+                id="nim_peminjam"
+                placeholder="Input NIM disini..."
               />
             </div>
             <div class="mb-3">
-              <label for="primaryNeeds" class="form-label">Kebutuhan</label>
-              <select class="form-select">
-                <option selected>Kebutuhan 1</option>
-                <option value="1">Kebutuhan 2</option>
-                <option value="2">Kebutuhan 3</option>
+              <label for="select_prodi">Program studi </label>
+              <select class="form-select" id="select_prodi">
+                <option value="" disabled selected>Pilih program studi</option>
+                <option value="option2">Informatika</option>
+                <option value="option3">Sistem Informasi</option>
+                <option value="option4">Teknik Komputer</option>
+                <option value="option5">Teknik Elektro</option>
+                <option value="option3">Teknik Fisika</option>
               </select>
             </div>
             <div class="mb-3">
-              <label for="secondaryNeeds" class="form-label">Kebutuhan 2</label>
-              <select class="form-select">
-                <option selected>Kebutuhan 2</option>
-                <option value="1">Kebutuhan 3</option>
-                <option value="2">Kebutuhan 4</option>
-              </select>
+              <label for="tanggal_peminjaman" class="form-label"
+                >Tanggal Peminjaman</label
+              >
+              <input type="date" class="form-control" id="tanggal_peminjaman" />
+            </div>
+            <div class="mb-3">
+              <label for="jumlah_pinjaman" class="form-label"
+                >Jumlah item yang dipinjam</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="jumlah_pinjaman"
+                placeholder="Input jumlah item disini..."
+              />
             </div>
             <div class="mt-4 text-center">
-              <button type="button" class="btn btn-outline-primary text-light" style="background-color: #3157BB;">
+              <button type="button" class="btn btn-info text-light">
                 Submit
               </button>
             </div>
           </div>
         </div>
       </div>
-      <!-- End of form request -->
+    </div>
+    <!-- End of form request -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
