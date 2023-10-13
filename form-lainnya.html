@@ -123,57 +123,101 @@
           </table>
         </div>
       </div>
-      <div class="row justify-content-center">
-        <h5 class="text-center">Form Submit File Request</h5>
-        <div class="col-md-8 border shadow-lg p-3 mb-5 bg-body rounded">
-          <div class="mb-3">
-            <label for="nama" class="form-label">Nama</label>
-            <input
-              type="text"
-              class="form-control"
-              id="nama"
-              placeholder="Input nama disini..."
-            />
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email address</label>
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              placeholder="Input email disini..."
-            />
-          </div>
-          <div class="mb-3">
-            <label for="nip_nim" class="form-label">NIP/NIM</label>
-            <input
-              type="number"
-              class="form-control"
-              id="nip_nim"
-              placeholder="Input nip/nim disini..."
-            />
-          </div>
-          <div class="mb-3">
-            <label for="pilih_matkul" class="form-label">Mata Kuliah</label>
-            <select class="form-select" id="pilih_matkul">
-              <option value="" disabled selected>Pilih mata kuliah</option>
-              <option value="option1">Algoritma dan Pemrograman</option>
-              <option value="option2">Sistem Basis Data</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="formFile" class="form-label"
-              >Upload file request yang sudah diisi</label
-            >
-            <input class="form-control" type="file" id="formFile" />
-          </div>
-          <div class="mt-4 text-center">
-            <button type="button" class="btn btn-info text-light">
-              Submit
-            </button>
+
+      <!-- Modal trigger -->
+      <!-- Button trigger modal -->
+      <div class="text-center">
+        <button
+          type="button"
+          class="btn btn-info text-light"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Submit Form Pengajuan
+        </button>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Form Submit File Request
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="row justify-content-center">
+                <div class="col-md-11 border shadow-lg p-3 bg-body rounded">
+                  <div class="mb-3">
+                    <label for="nama" class="form-label">Nama</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nama"
+                      placeholder="Input nama disini..."
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Input email disini..."
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="nip_nim" class="form-label">NIP/NIM</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="nip_nim"
+                      placeholder="Input nip/nim disini..."
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="pilih_matkul" class="form-label"
+                      >Mata Kuliah</label
+                    >
+                    <select class="form-select" id="pilih_matkul">
+                      <option value="" disabled selected>
+                        Pilih mata kuliah
+                      </option>
+                      <option value="option1">Algoritma dan Pemrograman</option>
+                      <option value="option2">Sistem Basis Data</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="formFile" class="form-label"
+                      >Upload file request yang sudah diisi</label
+                    >
+                    <input class="form-control" type="file" id="formFile" />
+                  </div>
+                  <div class="mt-4 text-center">
+                    <button type="button" class="btn btn-info text-light">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <!-- End of modal trigger -->
     </div>
     <!-- End of content form lainnya  -->
     <script
