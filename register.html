@@ -19,6 +19,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     />
 
+    <!-- Import jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <style>
       body {
         background-color: #eee;
@@ -26,11 +29,79 @@
       .card-header {
         background-color: #1f384f;
       }
+
+      nav {
+        background-color: #1f384f;
+      }
+
+      .nav-item a:hover {
+        transition: 0.7s;
+        background-color: #3157bb;
+      }
+
+      /* Additional CSS for phone sized media */
+      @media (max-width: 768px) {
+        .nav-link {
+          text-align: center;
+        }
+      }
     </style>
 
     <title>Register</title>
   </head>
   <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="home-page.html">
+          <img src="assets/logo_self.png" alt="" width="30" height="24" />
+        </a>
+        <button
+          class="navbar-toggler bg-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon w-100"
+            ><i class="fa-solid fa-caret-down"></i
+          ></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-light rounded me-2"
+                aria-current="page"
+                href="home-page.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light rounded me-2"
+                href="form-request.html"
+                >Formulir</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light rounded me-2" href="aslab-page.html"
+                >Aslab</a
+              >
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link text-light rounded me-2" href="profile.html"
+                >Profile</a
+              >
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Navbar -->
+
     <div class="container-fluid">
       <div class="row justify-content-center align-items-center mt-5 mb-5">
         <div class="col-md-8">
@@ -48,7 +119,7 @@
                     type="text"
                     class="form-control"
                     id="nama_lengkap"
-                    placeholder="Nama lengkap... "
+                    placeholder="Input nama lengkap disini..."
                   />
                 </div>
                 <div class="mb-3">
@@ -57,7 +128,7 @@
                     type="email"
                     class="form-control"
                     id="email"
-                    placeholder="Email..."
+                    placeholder="Input email disini..."
                   />
                 </div>
                 <div class="mb-3">
@@ -66,46 +137,68 @@
                     type="password"
                     class="form-control"
                     id="password"
-                    placeholder="Password..."
+                    placeholder="Input password disini..."
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="phone_number" class="form-label">Password</label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="phone_number"
-                    placeholder="Nomor telpon..."
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="nim_nik" class="form-label">NIM/NIK</label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="nim_nik"
-                    placeholder="NIM/NIK..."
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="selectOption" class="form-label"
-                    >Program Studi</label
+                  <label for="confirm_password" class="form-label"
+                    >Konfirmasi password</label
                   >
-                  <select class="form-select" id="selectOption">
-                    <option value="option1">Informatika</option>
-                    <option value="option2">Sistem Informasi</option>
-                    <option value="option3">Teknik Komputer</option>
-                    <option value="option4">Teknik Elektro</option>
-                    <option value="option5">Teknik Fisika</option>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="confirm_password"
+                    placeholder="Input konfirmasi password disini..."
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Nomor telepon</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="phone"
+                    placeholder="Input nomor telepon disini..."
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="select_role" class="form-label">Role</label>
+                  <select class="form-select" id="select_role">
+                    <option value="" disabled selected>Pilih role</option>
+                    <option value="aslab">Aslab</option>
+                    <option value="non-aslab">Non-aslab</option>
                   </select>
                 </div>
+
+                <!-- additional form field -->
+                <div class="mb-3" id="elementToToggle" style="display: none">
+                  <div class="form-group">
+                    <label for="nim_mahasiswa">NIM </label>
+                    <input
+                      type="number"
+                      class="form-control mb-3"
+                      id="nim_mahasiswa"
+                    />
+                    <label for="nim_mahasiswa">Program studi </label>
+                    <select class="form-select" id="select_role">
+                      <option value="" disabled selected>
+                        Pilih program studi
+                      </option>
+                      <option value="option2">Informatika</option>
+                      <option value="option3">Sistem Informasi</option>
+                      <option value="option4">Teknik Komputer</option>
+                      <option value="option5">Teknik Elektro</option>
+                      <option value="option3">Teknik Fisika</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- end of additional form field -->
                 <div class="text-center">
                   <button type="button" class="btn btn-info text-light">
                     Register
                   </button>
                   <p class="mt-2">
                     Sudah punya akun? Login
-                    <a href="login.html" class="fw-bold">disini</a>
+                    <a href="login.html">disini</a>
                   </p>
                 </div>
               </form>
@@ -119,5 +212,16 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(document).ready(function () {
+        $("#select_role").change(function () {
+          if ($(this).val() === "aslab") {
+            $("#elementToToggle").show();
+          } else {
+            $("#elementToToggle").hide();
+          }
+        });
+      });
+    </script>
   </body>
 </html>

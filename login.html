@@ -23,16 +23,85 @@
       body {
         background-color: #eee;
       }
-      .card-header {
+      .card-header,
+      .modal-header {
         background-color: #1f384f;
+      }
+
+      nav {
+        background-color: #1f384f;
+      }
+
+      .nav-item a:hover {
+        transition: 0.7s;
+        background-color: #3157bb;
+      }
+
+      /* Additional CSS for phone sized media */
+      @media (max-width: 768px) {
+        .nav-link {
+          text-align: center;
+        }
       }
     </style>
 
     <title>Login</title>
   </head>
   <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="home-page.html">
+          <img src="assets/logo_self.png" alt="" width="30" height="24" />
+        </a>
+        <button
+          class="navbar-toggler bg-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon w-100"
+            ><i class="fa-solid fa-caret-down"></i
+          ></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-light rounded me-2"
+                aria-current="page"
+                href="home-page.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light rounded me-2"
+                href="form-request.html"
+                >Formulir</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light rounded me-2" href="aslab-page.html"
+                >Aslab</a
+              >
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link text-light rounded me-2" href="profile.html"
+                >Profile</a
+              >
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Navbar -->
+
     <div class="container-fluid">
-      <div class="row justify-content-center align-items-center vh-100">
+      <div class="row justify-content-center align-items-center mt-5">
         <div class="col-md-6">
           <div class="card">
             <div class="card-header text-white text-center">
@@ -58,13 +127,74 @@
                     placeholder="Enter your password"
                   />
                 </div>
+                <div class="mb-3">
+                  <p class="text-end small">
+                    Lupa password? Klik
+                    <a
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      >disini</a
+                    >
+                  </p>
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5
+                            class="modal-title text-light"
+                            id="exampleModalLabel"
+                          >
+                            Reset Password
+                          </h5>
+                        </div>
+                        <div class="modal-body">
+                          <form>
+                            <div class="mb-3">
+                              <label for="email" class="form-label"
+                                >Email address</label
+                              >
+                              <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                placeholder="Enter your email"
+                              />
+                            </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-danger btn-sm"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-info text-light btn-sm"
+                          >
+                            Submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="text-center">
                   <button type="button" class="btn btn-info text-light">
                     Login
                   </button>
                   <p class="mt-2">
                     Belum punya akun? Daftar
-                    <a href="register.html" class="fw-bold">disini</a>
+                    <a href="register.html">disini</a>
                   </p>
                 </div>
               </form>
