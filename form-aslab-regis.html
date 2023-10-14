@@ -20,22 +20,18 @@
     />
 
     <style>
-      .h1 {
-        color: #1f284f;
+      nav {
+        background-color: #1f384f;
       }
 
-      nav{
-        background-color: #1F384F;
-      }
-
-      .nav-item a:hover{
+      .nav-item a:hover {
         transition: 0.7s;
-        background-color: #3157BB;
+        background-color: #3157bb;
       }
 
       /* Additional CSS for phone sized media */
       @media (max-width: 768px) {
-        .nav-link{
+        .nav-link {
           text-align: center;
         }
       }
@@ -49,24 +45,48 @@
         <a class="navbar-brand" href="home-page.html">
           <img src="assets/logo_self.png" alt="" width="30" height="24" />
         </a>
-        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon w-100"><i class="fa-solid fa-caret-down"></i></span>
+        <button
+          class="navbar-toggler bg-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon w-100"
+            ><i class="fa-solid fa-caret-down"></i
+          ></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active text-light rounded me-2" aria-current="page" href="home-page.html">Home</a>
+              <a
+                class="nav-link active text-light rounded me-2"
+                aria-current="page"
+                href="home-page.html"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light rounded me-2" href="form-aslab-regis.html">Daftar</a>
+              <a
+                class="nav-link text-light rounded me-2"
+                href="form-request.html"
+                >Formulir</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light rounded me-2" href="form-request.html">Peminjaman Alat</a>
+              <a class="nav-link text-light rounded me-2" href="aslab-page.html"
+                >Aslab</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light rounded me-2" href="aslab-page.html">Aslab</a>
+              <a class="nav-link text-light rounded me-2" href="profile.html"
+                >Profile</a
+              >
             </li>
           </ul>
+        </div>
       </div>
     </nav>
     <!-- End of Navbar -->
@@ -79,54 +99,124 @@
           </div>
           <div class="col-md">
             <div class="mb-3">
-              <label for="fullName" class="form-label">Full Name</label>
+              <label for="fullName" class="form-label">Nama lengkap</label>
               <input
                 type="text"
                 class="form-control"
                 id="fullName"
-                placeholder="Input your full name here..."
+                placeholder="Input nama lengkap disini..."
               />
             </div>
             <div class="mb-3">
-              <label for="studentEmail" class="form-label">Email</label>
-              <input
-                type="email"
-                class="form-control"
-                id="studentEmail"
-                placeholder="Input your email here..."
-              />
-            </div>
-            <div class="mb-3">
-              <label for="phoneNumber" class="form-label">Phone Number</label>
+              <label for="nim" class="form-label">NIM</label>
               <input
                 type="number"
                 class="form-control"
-                id="phoneNumber"
-                placeholder="Input your phone number here..."
+                id="nim"
+                placeholder="Input NIM disini..."
               />
             </div>
             <div class="mb-3">
-              <label for="subjectPrimary" class="form-label">Subject 1</label>
-              <select class="form-select">
-                <option selected>Mobile Application Development</option>
-                <option value="1">Algorithm and Programming</option>
-                <option value="2">Database Systems</option>
-                <option value="3">Visual Programming</option>
+              <label for="select_prodi">Program studi </label>
+              <select class="form-select mt-2" id="select_prodi">
+                <option value="" disabled selected>Pilih program studi</option>
+                <option value="option2">Informatika</option>
+                <option value="option3">Sistem Informasi</option>
+                <option value="option4">Teknik Komputer</option>
+                <option value="option5">Teknik Elektro</option>
+                <option value="option3">Teknik Fisika</option>
               </select>
             </div>
             <div class="mb-3">
-              <label for="subjectSecondary" class="form-label">Subject 2</label>
-              <select class="form-select">
-                <option selected>Mobile Application Development</option>
-                <option value="1">Algorithm and Programming</option>
-                <option value="2">Database Systems</option>
-                <option value="3">Visual Programming</option>
-              </select>
+              <label for="semester" class="form-label">Semester saat ini</label>
+              <input
+                type="number"
+                class="form-control"
+                id="semester"
+                placeholder="Input semester disini..."
+              />
+            </div>
+            <div class="mb-3">
+              <label for="nama_bank" class="form-label">Nama bank</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nama_bank"
+                placeholder="Input nama bank disini..."
+              />
+            </div>
+            <div class="mb-3">
+              <label for="cabang_bank" class="form-label">Cabang bank</label>
+              <input
+                type="text"
+                class="form-control"
+                id="cabang_bank"
+                placeholder="Input cabang bank disini..."
+              />
+            </div>
+            <div class="mb-3">
+              <label for="no_rek" class="form-label">Nomor rekening</label>
+              <input
+                type="number"
+                class="form-control"
+                id="no_rek"
+                placeholder="Input nomor rekening disini..."
+              />
+            </div>
+            <div class="mb-3">
+              <label for="pemilik_rek" class="form-label"
+                >Nama pemilik rekening</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="pemilik_rek"
+                placeholder="Input nama pemilik rekening disini..."
+              />
+            </div>
+            <div class="mb-3">
+              <label for="jumlah_kelas" class="form-label"
+                >Jumlah kelas yang diinginkan</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="jumlah_kelas"
+                placeholder="Input jumlah kelas disini..."
+              />
+              <p class="small">Disclaimer bisa ditaruh disini.</p>
+            </div>
+            <div class="mb-3">
+              <label for="peminatan" class="form-label"
+                >Peminatan jurusan</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="peminatan"
+                placeholder="Input peminatan jurusan disini..."
+              />
+              <p class="small">
+                Jika belum memilih peminatan bisa diisi dengan tanda "-".
+              </p>
+            </div>
+            <div class="mb-3">
+              <label for="ipk" class="form-label">IPK terakhir</label>
+              <input
+                type="text"
+                class="form-control"
+                id="ipk"
+                placeholder="Input IPK terakhir disini..."
+              />
+            </div>
+            <div class="mb-3">
+              <label for="berkas" class="form-label">Upload berkas</label>
+              <input class="form-control" type="file" id="berkas" />
             </div>
             <div class="mt-4 text-center">
-              <a href="home-page.html"
-                ><button type="button" class="btn btn-primary">
-                  Submit
+              <a href="form-aslab-regis-next.html"
+                ><button type="button" class="btn btn-info text-light">
+                  Next
                 </button></a
               >
             </div>
