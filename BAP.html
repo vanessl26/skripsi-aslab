@@ -36,8 +36,7 @@
         }
       }
     </style>
-
-    <title>Welcome Aslab!</title>
+    <title>Koreksi Absensi Aslab</title>
   </head>
   <body>
     <!-- Navbar -->
@@ -76,11 +75,11 @@
                 >Formulir</a
               >
             </li>
-            <!-- <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link text-light rounded me-2" href="aslab-page.html"
                 >Aslab</a
               >
-            </li> -->
+            </li>
             <li class="nav-item">
               <a class="nav-link text-light rounded me-2" href="profile.html"
                 >Profile</a
@@ -92,69 +91,76 @@
     </nav>
     <!-- End of Navbar -->
 
-    <!-- Aslab Page -->
-    <div class="container mt-5">
-      <div class="h1 text-center fw-bold">Selamat Datang Aslab!</div>
-      <div
-        class="m-1 row shadow p-3 mb-5 bg-body rounded d-flex justify-content-center"
-      >
-        <div class="col-md-3 me-2">
-          <div class="row">
-            <a href="informasi-kelas-aslab.html">
-              <img
-                src="assets/informasi-kelas.png"
-                class="bg-light img-fluid rounded-circle"
-                alt="Image 3"
-              />
-            </a>
-          </div>
-          <div class="row">
-            <a
-              href="informasi-kelas-aslab.html"
-              class="text-muted text-center fw-bold text-decoration-none mt-2"
-              >Informasi Kelas</a
-            >
-          </div>
-        </div>
-        <div class="col-md-3 me-2">
-          <div class="row">
-            <a href="absensi-aslab.html">
-              <img
-                src="assets/absensi-kelas.png"
-                class="bg-light img-fluid rounded-circle"
-                alt="Image 1"
-              />
-            </a>
-          </div>
-          <div class="row">
-            <a
-              href="absensi-aslab.html"
-              class="text-muted text-center fw-bold text-decoration-none mt-2"
-              >Absensi Kelas</a
-            >
-          </div>
-        </div>
-        <div class="col-md-3 me-2">
-          <div class="row">
-            <a href="koreksi-absensi-aslab.html">
-              <img
-                src="assets/koreksi-absensi.png"
-                class="bg-light img-fluid rounded-circle"
-                alt="Image 2"
-              />
-            </a>
-          </div>
-          <div class="row">
-            <a
-              href="koreksi-absensi-aslab.html"
-              class="text-muted text-center fw-bold text-decoration-none mt-2"
-              >Koreksi Absensi</a
-            >
+    <!-- Content of BAP -->
+    <div class="container-fluid">
+      <div class="row mt-3">
+        <h1 class="text-center">Berita Acara Pemeriksaaan Aslab</h1>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-9 border shadow-lg p-3 mb-5 bg-body rounded">
+          <form>
+            <div class="row mb-3">
+              <label for="week" class="col-sm-2 col-form-label">Week</label>
+              <div class="col-sm-10">
+                <input type="number" class="form-control" id="week" />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="tanggal_kelas" class="col-sm-2 col-form-label"
+                >Tanggal Kelas</label
+              >
+              <div class="col-sm-10">
+                <input type="date" class="form-control" id="tanggal_kelas" />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="jenis_pertemuan" class="col-sm-2 col-form-label"
+                >Jenis Pertemuan</label
+              >
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="jenis_pertemuan" />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="topik" class="col-sm-2 col-form-label">Topik</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" id="topik" rows="2"></textarea>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="jam_mulai" class="col-sm-2 col-form-label"
+                >Jam Mulai</label
+              >
+              <div class="col-sm-10">
+                <input type="time" class="form-control" id="jam_mulai" />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="jam_selesai" class="col-sm-2 col-form-label"
+                >Jam Selesai</label
+              >
+              <div class="col-sm-10">
+                <input type="time" class="form-control" id="jam_selesai" />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="foto_kelas" class="col-sm-2 col-form-label"
+                >Foto Kelas</label
+              >
+              <div class="col-sm-10">
+                <input type="file" class="form-control" id="fileInput" />
+              </div>
+            </div>
+          </form>
+          <div class="text-center">
+            <button type="submit" class="btn btn-info text-light">
+              Submit
+            </button>
           </div>
         </div>
       </div>
     </div>
-
+    <!-- End of BAP -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
